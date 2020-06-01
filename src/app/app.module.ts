@@ -6,6 +6,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FeedPageModule } from './pages/feed-page/feed-page.module';
 import { PokemonCardModule } from './components/pokemon-card/pokemon-card.module';
+import { LoadingSpinnerModule } from './components/loading-spinner/loading-spinner.module';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { PokemonCardModule } from './components/pokemon-card/pokemon-card.module
     BrowserModule,
     HttpClientModule,
     AppRoutingModule,
-    FeedPageModule
+    FeedPageModule,
+    LoadingSpinnerModule
   ],
   providers: [],
   bootstrap: [AppComponent]

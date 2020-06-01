@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { FeedPageComponent } from './feed-page.component';
 import { PokemonService } from 'src/app/services/pokemon.service';
 import { PokemonCardModule } from 'src/app/components/pokemon-card/pokemon-card.module';
+import { SearchModule } from 'src/app/components/search/search.module';
 
 
 
@@ -10,7 +11,8 @@ import { PokemonCardModule } from 'src/app/components/pokemon-card/pokemon-card.
   declarations: [FeedPageComponent],
   imports: [
     CommonModule,
-    PokemonCardModule
+    PokemonCardModule,
+    SearchModule
   ],
   providers: [PokemonService],
   exports: [FeedPageComponent]

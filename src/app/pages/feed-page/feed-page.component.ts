@@ -6,6 +6,7 @@ import { PokemonList } from 'src/app/models/pokemon-list.model';
   selector: 'app-feed-page',
   template: `
     <div *ngIf="pokemonList !== undefined">
+        <app-search></app-search>
         <app-pokemon-card *ngFor="let p of pokemonList.results" [pokemon]=p></app-pokemon-card>
     </div>
   `,
