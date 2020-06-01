@@ -7,8 +7,8 @@ import { PokemonList } from './models/pokemon-list.model';
   template: `
     <router-outlet></router-outlet>
     <div>
-      <app-loading-spinner *ngIf="pokemonList !== undefined;else feedPage"></app-loading-spinner>
-      <app-feed-page #feedPage></app-feed-page>
+      <app-loading-spinner *ngIf="pokemonList === undefined;else feedPage"></app-loading-spinner>
+      <app-feed-page [pokemonList]=pokemonList #feedPage></app-feed-page>
     </div>
   `,
   styleUrls: ['./app.component.scss']
@@ -17,7 +17,9 @@ export class AppComponent {
   title = 'Pokedex';
   public pokemonList: PokemonList;
 
-  constructor(private pokemonService: PokemonService){
+  constructor(private pokemonService: PokemonService){}
+
+  ngOnInit(): void {
     this.loadPokemons();
   }
   
@@ -32,10 +34,7 @@ export class AppComponent {
             data => {
               let index = this.pokemonList.results.findIndex(x => x.url === value.url);
               this.pokemonList.results[index] = data;
-              /*
-              if(index === array.length-1) {
-                sessionStorage.setItem("pokemonList", JSON.stringify(this.pokemonList));
-              }*/
+              
             }, 
             error => console.log(error));
           });

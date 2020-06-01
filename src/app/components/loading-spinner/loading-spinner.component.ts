@@ -5,6 +5,7 @@ import { Component, OnInit } from '@angular/core';
   template: `
     <div id="loading-spinner-container">
       <img src='../../../assets/img/loading-spinner.gif' alt="Loading..."/>
+      <p>...Loading pokédex...</p>
     </div>
   `,
   styleUrls: ['./loading-spinner.component.scss']
