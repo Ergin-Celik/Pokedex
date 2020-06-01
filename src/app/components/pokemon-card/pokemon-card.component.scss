@@ -1,0 +1,40 @@
+.pokemon-card-container{
+     display: flex;
+     flex-direction: row;
+     align-items: center;
+     padding-left: 15px;
+     margin-top: 10px;
+     margin-bottom: 10px;
+     background-color: rgba(224, 239, 251, 1);
+     border-radius: 25px;
+     font-weight: bold;
+     font-family: Andale Mono;
+
+     .pokemon-card-id{
+          align-self: flex-start;
+          margin-top: 10px;
+          border: 1px solid lightgray;
+          border-radius: 28px;
+          padding: 5px;
+          background-color: white;
+     }
+
+     .pokemon-card-sprite{
+          margin-left: 10px;
+          margin-right: 10px;
+          background-image: url(../../../assets/img/unnamed.png);
+          background-size: cover;
+          
+          img{
+               background-color: rgba(224, 239, 251, 0.59);
+          }
+     }
+
+     .pokemon-card-name{
+          font-size: 1.5rem;
+          background-color: white;
+          padding: 10px;
+          border-radius: 15px;
+          border: 1px solid rgba(210, 210, 210, 0.56);
+     }
+}
